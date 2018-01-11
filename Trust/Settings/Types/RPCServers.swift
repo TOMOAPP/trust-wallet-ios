@@ -8,6 +8,7 @@ enum RPCServer: String {
     case ropsten
     case poa
     case sokol
+    case tomo
     case classic
 
     var chainID: Int {
@@ -18,6 +19,7 @@ enum RPCServer: String {
         case .poa: return 99
         case .sokol: return 77
         case .classic: return 61
+        case .tomo: return 40686
         }
     }
 
@@ -29,13 +31,14 @@ enum RPCServer: String {
         case .poa: return "POA Network"
         case .sokol: return "Sokol"
         case .classic: return "Ethereum Classic"
+        case .tomo: return "TOMO Network"
         }
     }
 
     var isTestNetwork: Bool {
         switch self {
         case .main, .poa, .classic: return false
-        case .kovan, .ropsten, .sokol: return true
+        case .kovan, .ropsten, .sokol, .tomo: return true
         }
     }
 
@@ -45,6 +48,7 @@ enum RPCServer: String {
         case .classic: return "ETC"
         case .kovan, .ropsten: return "ETH"
         case .poa, .sokol: return "POA"
+        case .tomo: return "TMC"
         }
     }
 
@@ -61,6 +65,7 @@ enum RPCServer: String {
             case RPCServer.ropsten.name: return .ropsten
             case RPCServer.poa.name: return .poa
             case RPCServer.sokol.name: return .sokol
+            case RPCServer.tomo.name: return .tomo
             default: return .main
             }
         }()
@@ -75,6 +80,7 @@ enum RPCServer: String {
             case RPCServer.ropsten.chainID: return .ropsten
             case RPCServer.poa.chainID: return .poa
             case RPCServer.sokol.chainID: return .sokol
+            case RPCServer.tomo.chainID: return .tomo
             default: return .main
             }
         }()

@@ -28,6 +28,8 @@ struct ConfigExplorer {
                 return endpoint + "/txid/search/" + ID
             case .sokol:
                 return endpoint + "/tx/" + ID
+            case .tomo:
+                return endpoint + "/#/tx/" + ID
             }
         }()
         return URL(string: urlString)!
@@ -47,6 +49,8 @@ struct ConfigExplorer {
             return "https://poaexplorer.com"
         case .sokol:
             return "http://testnet.oracles.org:4000"
+        case .tomo:
+            return "https://explorer.tomocoin.io"
         }
     }
 }

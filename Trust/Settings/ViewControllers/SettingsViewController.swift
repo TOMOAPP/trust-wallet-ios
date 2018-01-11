@@ -71,7 +71,7 @@ class SettingsViewController: FormViewController {
                 selectorController.enableDeselection = false
                 selectorController.sectionKeyForValue = { option in
                     switch option {
-                    case .main, .classic, .poa: return ""
+                    case .main, .classic, .poa, .tomo: return ""
                     case .kovan, .ropsten, .sokol: return NSLocalizedString("settings.network.test.label.title", value: "Test", comment: "")
                     }
                 }

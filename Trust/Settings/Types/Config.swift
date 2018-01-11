@@ -70,6 +70,7 @@ struct Config {
             case .ropsten: return "https://ropsten.infura.io/llyrtzQ3YhkdESt2Fzrk"
             case .poa: return "https://core.poa.network"
             case .sokol: return "https://sokol.poa.network"
+            case .tomo: return "https://core.tomocoin.io"
             }
         }()
         return URL(string: urlString)!
@@ -84,6 +85,7 @@ struct Config {
             case .ropsten: return "https://ropsten.trustwalletapp.com"
             case .poa: return "https://poa.trustwalletapp.com"
             case .sokol: return "https://trust-sokol.herokuapp.com"
+            case .tomo: return "https://tomo-trust-wallet.herokuapp.com"
             }
         }()
         return URL(string: urlString)!
